@@ -1,0 +1,17 @@
+/* Programa que pasa de furlong a yardas*/
+
+#include<iostream>
+
+int main(){
+
+  float a=0;
+
+  std::cout<<"Digite una distacia en furlong"<<std::endl;
+  std::cin>>n;
+
+  float Y=a*200;
+
+  std::cout<<Y<<std::endl;
+  return 0;
+}
+	  
