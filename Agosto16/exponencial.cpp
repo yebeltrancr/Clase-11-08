@@ -12,7 +12,7 @@ int main(void)
 {
   std::cout.precision(16); std::cout.setf(std::ios::scientific);
 
-  double x=2;
+  double x=22;
 
   for (int Nmax = 0; Nmax <= 100; ++Nmax){
     std::cout << Nmax
