@@ -1,0 +1,18 @@
+CXX = g++
+CXXFLAGS = -I.
+LDFLAGS =
+SOURCES = main.cpp foo.cpp bar.cpp
+OBJ = $(SOURCES:.cpp=.o) # Extraer automatimaente el nombre de los objetos
+DEPS = foo.h bar.h
+
+all : main.x $(SOURCES) $(DEPS) #Marca todos los objetivos  default
+
+main.x: $(OBJ)
+	@echo "Creating main executable ..."
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+.cpp.o:
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+.PHONY: clean
+clean:
+	rm -f *.o *~ *.x
